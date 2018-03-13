@@ -1,0 +1,12 @@
+<div class="top-articles" >
+  <h3>Top Articles</h3>
+  <ul class="top-list">
+    <li *ngFor="let article of articles;let i=index" class="top-article-item">
+      <a (click)="openArticle($event, article.url)">
+        <img width="75" height="75" [src]="article.image" [alt]="article.image_alt" class="top-article-image">
+        <span [innerHTML]="article.title || ''" class="top-article-title"></span>
+      </a>
+      <div [innerHTML]="article.post_date | date:'MMMM d, y'" class="top-article-date"></div>
+    </li>
+  </ul>
+</div>

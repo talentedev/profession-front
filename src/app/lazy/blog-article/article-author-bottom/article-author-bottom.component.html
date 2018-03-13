@@ -1,0 +1,12 @@
+<div #element class="article-author-bottom-holder circle-icon-line-holder">
+  <fmp-circle-icon-line class="circle-icon-line-subscribe" [icon]="'career-finder'"></fmp-circle-icon-line>
+
+  <div class="article-author-bottom">
+    <img [src]="author?.avatar" [alt]="author?.avatar_alt || author?.name || 'Author alt name'" (error)="authorAvatarNotLoaded($event)">
+    <div class="author-text">
+      <p [innerHTML]="author?.description"></p>
+      <br>
+      <p>If you are interested in working with <a [href]="author?.link" [innerHTML]="author?.name"></a> to win the attention of hiring managers and start landing more interviews, sign up for an exploratory call now to discuss next steps.</p>
+    </div>
+  </div>
+</div>
